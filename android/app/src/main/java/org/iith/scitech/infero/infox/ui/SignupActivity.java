@@ -1,0 +1,95 @@
+package org.iith.scitech.infero.infox.ui;
+
+import android.app.ProgressDialog;
+import android.content.Intent;
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.ProgressBar;
+import android.widget.Toast;
+
+import org.iith.scitech.infero.infox.R;
+import org.iith.scitech.infero.infox.util.HttpServerRequest;
+import org.iith.scitech.infero.infox.util.PrefUtils;
+
+
+public class SignupActivity extends ActionBarActivity {
+
+    String name, phone, password;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_signup);
+
+        findViewById(R.id.button_signUp).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                EditText editText = (EditText) findViewById(R.id.loginPhone);
+                phone = editText.getText().toString();
+
+                editText = (EditText) findViewById(R.id.loginPass);
+                password = editText.getText().toString();
+
+                editText = (EditText) findViewById(R.id.loginName);
+                name = editText.getText().toString();
+
+                if(phone.isEmpty() || password.isEmpty() || name.isEmpty())
+                {
+                    Toast.makeText(getApplicationContext(), "Please fill in the details to Sign up.", Toast.LENGTH_LONG).show();
+                    return;
+                }
+                new SignUpTask().execute();
+            }
+        });
+
+        findViewById(R.id.button_login).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                    Intent intent = new Intent(SignupActivity.this, WelcomeActivity.class);
+                    startActivity(intent);
+                    finish();
+            }
+        });
+    }
+
+    private class SignUpTask extends AsyncTask<Void, Void, String> {
+        ProgressDialog mProgressDialog = new ProgressDialog(SignupActivity.this);
+
+        @Override
+        protected void onPreExecute() {
+            mProgressDialog.setTitle("Signing Up");
+            mProgressDialog.setIndeterminate(true);
+            mProgressDialog.show();
+            super.onPreExecute();
+        }
+
+        @Override
+        protected String doInBackground(Void... params) {
+            // Perform validation here
+            String reply = new HttpServerRequest(SignupActivity.this).getReply("register.php", "name", name, "phone", phone, "password", password);
+            return reply;
+        }
+
+        @Override
+        protected void onPostExecute(String reply)
+        {
+            // Do some UI related stuff here
+            Toast.makeText(getApplicationContext(), reply, Toast.LENGTH_LONG).show();
+            if(reply.equals("Success!"))
+            {
+                PrefUtils.setLoginStatus(getApplicationContext(), true);
+                PrefUtils.setPhoneNumber(getApplicationContext(), phone);
+                PrefUtils.setName(getApplicationContext(), name);
+                Intent intent = new Intent(SignupActivity.this, BrowseActivity.class);
+                startActivity(intent);
+                finish();
+            }
+            mProgressDialog.dismiss();
+            super.onPostExecute(reply);
+        }
+    }
+
+}

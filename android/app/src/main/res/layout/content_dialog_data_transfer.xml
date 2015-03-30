@@ -1,0 +1,43 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:iosched="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.WelcomeActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#e5e5e5">
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/dataTransfer_ListView">
+        </ListView>
+
+    </FrameLayout>
+
+    <!-- Button bar -->
+    <LinearLayout
+        android:layout_height="48dp"
+        android:background="@color/theme_primary"
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="RECEIVE"
+            android:textColor="#fff"
+            android:textSize="@dimen/text_size_medium"
+            android:fontFamily="@string/font_fontFamily_medium"
+            android:textAllCaps="true"
+            android:id="@+id/dataTransfer_receive"
+            android:background="@color/theme_primary"/>
+
+    </LinearLayout>
+</LinearLayout>

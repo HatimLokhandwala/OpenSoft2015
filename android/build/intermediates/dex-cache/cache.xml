@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/home/shashank/Android/shashank/InfoX/android/app/libs/alljoyn.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="5c894cb108322466f3bc41002a8c784924cfe0bf">
+        <dex dex="/home/shashank/Android/shashank/InfoX/android/app/build/intermediates/pre-dexed/debug/alljoyn-997430032a46a989c0e1b7acf339b9c73f3fd6de.jar" />
+    </item>
+    <item
+        jar="/home/shashank/Android/shashank/InfoX/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/libs/internal_impl-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="/home/shashank/Android/shashank/InfoX/android/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-24e7576e452de2784abd9d0a39a40217fa9f1596.jar" />
+    </item>
+    <item
+        jar="/home/shashank/Android/shashank/InfoX/android/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/21.0.3/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="00b0b7233e1ec64acebfac40d4983d32d4712426">
+        <dex dex="/home/shashank/Android/shashank/InfoX/android/app/build/intermediates/pre-dexed/debug/classes-040d63823a59ea251a32a78be8225106c8963446.jar" />
+    </item>
+    <item
+        jar="/home/shashank/Android/shashank/InfoX/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="/home/shashank/Android/shashank/InfoX/android/app/build/intermediates/pre-dexed/debug/classes-1936e3b48a492836a552a13eed6b6d1f802729c8.jar" />
+    </item>
+    <item
+        jar="/home/shashank/Android/shashank/InfoX/android/app/build/intermediates/exploded-aar/android/pullToRefreshLibrary/unspecified/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4e40fa8f429d220be16318941fac55bd7809466a">
+        <dex dex="/home/shashank/Android/shashank/InfoX/android/app/build/intermediates/pre-dexed/debug/classes-145b35cc2e886d9e68a5338ebee690a82021b2e8.jar" />
+    </item>
+    <item
+        jar="/home/shashank/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.3/support-annotations-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
+        <dex dex="/home/shashank/Android/shashank/InfoX/android/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.3-fad4e630a2aea6e5667eef8e583290552b2afc22.jar" />
+    </item>
+    <item
+        jar="/home/shashank/Android/shashank/InfoX/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
+        <dex dex="/home/shashank/Android/shashank/InfoX/android/app/build/intermediates/pre-dexed/debug/classes-2ff211b8c38f11856336bb4d68c9cba909f38469.jar" />
+    </item>
+
+</items>
